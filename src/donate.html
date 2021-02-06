@@ -6,21 +6,60 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Web 3 Demo</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
-    <script src='node_modules/web3/dist/web3.min.js'></script>
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 
 <body>
 
-    Web 3 Demo
-    <br >
-    <button class="enableEthereumButton">Enable Ethereum</button>
-    <button onclick="appeal();">Appeal</button>
-    <button onclick="donate();">Donate</button>
-    <br /><br />
-    Status: <span id="status">Loading...</span>
+   
+ 
+          <h1 class="text-center">Total appeals</h1>
+          
+          <br/>
+          
+         
+            <table class="table">
+              <thead>
+                <tr>
+                  
+                  <th scope="col">Appeal id</th>
+                  <th scope="col">Name</th>
+                    <th scope="col">Occupation</th>
+                    <th scope="col">Home address</th>
+                </tr>
+              </thead>
+              <tbody id="appealers">
+              </tbody>
+            </table>
+           
+           
+            
+            
+              <div id=dn>
+                <label for="id" >Enter the id you want to donate to</label><input type="text" id="name" placeholder="eg. 3"></input>
+                <br>
+                <button
+                onclick="App.donate()">Donate</button>
+                <p id="warn" color=red></p>
+              </div>
+            </form>
+            <p id="accountAddress" class="text-center"></p>
+         
+   
 
-    <script type="text/javascript">
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/AppDonate.js"></script>
+
+</body>
+
+</html>
+<!--  <script type="text/javascript">
         
  // var url_infura='https://mainnet.infura.io/v3/c91ea7adc56147c991482d5d14f00a3f';
 //var web3=new Web3(url_infura)
@@ -171,7 +210,4 @@ else
         }
 
         load();
-    </script>
-</body>
-
-</html>
+    </script> -->
