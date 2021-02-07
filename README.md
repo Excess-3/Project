@@ -19,4 +19,4 @@ git clone https://github.com/Excess-3/Project
 
 ###Step 2
 check if node.js is installed
-* in termial write command 'node -v'
+* in termial write command '''node -v'''
