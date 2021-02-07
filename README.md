@@ -1,3 +1,3 @@
-#Discover Your Wings
+# Discover Your Wings
 
-###A decentralised Donations App
+### A decentralised Donations App
