@@ -33,3 +33,12 @@ On poweshell write the command npm run dev
 
 Now you can view Our Website running on your machine.
 
+###### This is a donations website
+Some rules that Govern it's Working:
+* Anybody can appeal for sanitary pads from anywhere in the world with thier name,address and occupation
+* The appeal is registered on the BlockChain
+* Donors can view the appealers and choose who they wish to Donate to.
+* Any donor has to give 450 Rs, and 6 packets of sanitary pads will be delivered to the appealer. (there is no direct money transfer to avoid misuse of money)
+#### Additional Rules
+* Once the appealer recieves the packets for 6 months, she cannot appeal for next 6 months.This has been done so as to avoid further selling of pads.
+* No-body can both appeal as well as donate to themselves.
