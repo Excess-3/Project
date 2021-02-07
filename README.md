@@ -13,3 +13,6 @@ Install these prerequisites to run the dapp on the test network ganache
 * Ganache: http://truffleframework.com/ganache/
 
 * Metamask: https://metamask.io/
+
+#### Step 1. Clone the project
+git clone https://github.com/Excess-3/Project
