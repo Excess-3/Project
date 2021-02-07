@@ -16,3 +16,7 @@ Install these prerequisites to run the dapp on the test network ganache
 
 #### Step 1. Clone the project
 git clone https://github.com/Excess-3/Project
+
+###Step 2
+check if node.js is installed
+* in termial write command 'node -v'
