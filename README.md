@@ -17,6 +17,19 @@ Install these prerequisites to run the dapp on the test network ganache
 #### Step 1. Clone the project
 git clone https://github.com/Excess-3/Project
 
-###Step 2
-check if node.js is installed
-* in termial write command      node -v     
+#### Step 2
+check if node.js and truffle are installed
+* in termial write command      node -v , truffle -v
+* if no error messages show follow the steps below
+
+#### Step 3
+Go to Ganache>QuickStart>Contracts>Link Truffle Project>Add Project
+* Choose Project >>Truffle-Config>> Save
+#### Step 4
+Open poweshell and write the command truffle migrate --reset
+
+#### Step 5
+On poweshell write the command npm run dev
+
+Now you can view Our Website running on your machine.
+
