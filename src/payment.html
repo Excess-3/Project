@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+   
+    <style>
+        .firstpay {
+            width:800px;
+            height: 500px;
+            /background-image: url(58930.jpg);/
+        
+            border: rgb(185, 9, 238);
+            border-style: double;
+            border-width: thick;
+            margin: auto;
+            text-align: center;
+            font-size: medium;
+        }
+        h1{
+            font-family: sans-serif;
+            font-weight: bold;
+            margin: 30px;
+            padding-top: 15pxpx;
+            text-align: center;
+            padding: 30px;
+        }
+        p{
+            text-align:center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="firstpay" >
+   <form  action="">
+      
+                
+              
+        
+       <h1 >Payment information</h2>
+         <label for="name" >Enter the id you want to donate to   </label><input type="text" id="name" placeholder="eg. 3"></input>
+        
+               <class= donate type="submit" name="button" onclick="App.check()"> Check </button>
+                <p id="warn"></p> 
+       <p > Card type:
+           <select name="card type" id="cardtype">
+               <option value="">---select a card type--</option>
+               <option value="rupaya">Rupaya</option>
+               <option value="visa">Visa</option>
+               <option value="master card">Master card</option>
+           </select>
+       </p>
+       <p>
+           Card number <input type="number" name="card_number" id="card_number">
+       </p>
+       <p>
+           Expiration Date: <input type="date" name="exp_date" id="exp_date">
+       </p>
+       <p> CVV <input type="password" name="cvv" id="cvv"></p>
+       <p>  Address: <input type="text" name="address" id="address"> </p>
+       <div>
+       
+    </div>
+   </form>
+  <class= donate type="submit" value="Donate Now" onclick="App.donate()">Donate Now 
+</div>
+ <p id="accountAddress" class="text-center"></p>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/AppPay.js"></script>
+</body>
+</html>

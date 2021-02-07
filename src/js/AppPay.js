@@ -3,7 +3,7 @@ App = {
   contracts: {},
   account: '0x0',
   hasVoted: false,
-  n: 0,
+
   init: function() {
     return App.initWeb3();
   },
@@ -68,65 +68,23 @@ App = {
 
   render: function() {
     var donationInstance;
- 
-var dn = $("#dn");
-
+   // var loader = $("#loader");
     
-    dn.hide();
-  
+
+    //loader.hide();
+   
+
 
     // Load account data
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
-
-
         $("#accountAddress").html("Your Account: " + account);
+
       }
     });
 
-    // Load contract data
-    App.contracts.Donation.deployed().then(function(instance) {
-      donationInstance = instance;
-
-      return donationInstance.appeals();
-    }).then(function(appeals) {
-     
- 
-     
-      for (var i = 1; i <= appeals; i++) {
-      
-     
-        donationInstance.getAddress(i).then (function(adr) {
-          return donationInstance.appealers(adr);
-          }).then (function(value)
-          {
-            if(!value[5] )
-            {
-           if(value[0]!=0)
-           {
-          var id=value[0];
-          var name = value[1];
-          var occupation = value[2];
-          var home = value[3];
-         
-          // Render candidate Result
-          var Template = "   " +id + "   " + name + "   " + occupation +"   " + home + "   ";
-          appealers.append(Template);
-        
-          // Render candidate ballot option
-        }
-        }
-          });
-          //});
-          
-        
-        }
-        dn.show();
-      });
-
-  
-  },
+},
 
    
       
@@ -164,35 +122,68 @@ var dn = $("#dn");
 
 
 
-donate: function() {
-  $("#warn").html("" );
+check: function() {
+  $("#warn").html("  ");
     var name = $('#name').val();
-    App.contracts.Donation.deployed().then(function(instance) {
-      donationInstance=instance;
-      return donationInstance.getAddress(name )
-    }).then(function(result) {
-     donationInstance.appealers(result).then(function(val){
-
-console.log(val);
     
-     if(val[5] )
-     {
-   $("#warn").html("Please enter valid id!! " );
- }
- if(!val[6])
- {
-   $("#warn").html("Please enter valid id here!! " );
-}
+    App.contracts.Donation.deployed().then(function(instance) {
+      donationInstance = instance;
+
+      return donationInstance.getAddress(name);
+    }).then(function(adr) {
+     
+ 
+     
+     
+     
+        
+          return donationInstance.appealers(adr);
+          }).then (function(value)
+          {
+            if(value[6])
+            {
+              if(!value[5])
+              {
+               $("#warn").html("Okay");
+              
+              }
+             else
+               $("#warn").html("Invalid Id! ");
+            }
+            else
+            {
+              $("#warn").html("Invalid Id!! ");
+            }
+        });
+
+  },
+  
+ donate: function() {
+    var name = $('#name').val();
+   App.check();
+    var check= $('#warn').value;
+    console.log(check);
+    
+    App.contracts.Donation.deployed().then(function(instance) {
+      return donationInstance.pay(name ,450,{ from: App.account });
+    }).then(function(result) {
+      // Wait for votes to update
+     // $("#content").hide();
+      //$("#loader").show();
     }).catch(function(err) {
       console.error(err);
     });
-     });
   }
-  
  
+  
 };
 
-
+ 
+        
+          
+        
+     
+   
 
 
 
