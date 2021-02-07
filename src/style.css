@@ -692,8 +692,8 @@ body {
 
 /* Contact US section */
 .contact{
-    background-image: linear-gradient( 109.7deg,  rgba(1,0,47,1) -13.3%, rgba(41,109,255,1) 100.2% );
-    /* background: linear-gradient(to left,  #e91ee3 , #03a9f4 ); */
+/*     background-image: linear-gradient( 109.7deg,  rgba(1,0,47,1) -13.3%, rgba(41,109,255,1) 100.2% ); */
+    background: linear-gradient(to left,  #e91ee3 , #03a9f4 );
     /* height: 500px; */
     margin:10% 0 10% 0;
     width: 100%;
@@ -737,7 +737,8 @@ body {
 .contact .contactBtn:hover{
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 color: white;
-background-color: blue;
+/* background-color: blue; */
+   background-color: #03a9f4;
 }
 .contact .contactBtn:active {
 
