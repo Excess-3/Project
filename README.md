@@ -42,6 +42,8 @@ Some rules that Govern it's Working:
 #### Additional Rules
 * Once the appealer recieves the packets for 6 months, she cannot appeal for next 6 months.This has been done so as to avoid further selling of pads.
 * No-body can both appeal as well as donate to themselves.
+
+
 ![Screenshot (239)](https://user-images.githubusercontent.com/76619050/107145345-d8371000-6966-11eb-8be5-0289a23232a2.png)
 
 ![Screenshot (240)](https://user-images.githubusercontent.com/76619050/107145444-79be6180-6967-11eb-845b-a1bc3cd00b82.png)
